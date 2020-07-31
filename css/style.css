@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;600;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+  font-family: 'Saira', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+}
+
+.linear {
+  background: linear-gradient(150deg, #005F94 14.39%, rgba(103, 199, 253, 0.97) 63.89%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  background: #FCFCFC;
+  -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  height: 205px;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .nav .clock .time {
+  font-size: 2em;
+}
+
+.container .nav .profile {
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.container .nav .profile .pic {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.container .nav .profile .pic img {
+  width: 100%;
+  height: auto;
+}
+
+.container .nav .nav-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .nav .nav-icons svg {
+  cursor: pointer;
+  margin: 0 15px;
+  width: 23px;
+  height: 24px;
+}
+
+.container .rooms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .rooms p {
+  color: #CACACA;
+  height: 33px;
+  font-weight: 600;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container .rooms p.linear {
+  font-size: 1.3em;
+}
+
+.container .controls {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr 4fr;
+      grid-template-columns: 3fr 2fr 4fr;
+  grid-gap: 20px;
+  color: #1388CA;
+  margin-top: 2em;
+}
+
+.container .controls .air .temperature {
+  font-size: 4em;
+  color: #0A3B56;
+}
+
+.container .controls .air .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.container .controls .air .buttons div {
+  width: 80px;
+  height: 50px;
+  font-size: 2em;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container .controls .li-wi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .controls .li-wi .lw {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 10px 0;
+}
+
+.container .controls .li-wi .lw .toggler {
+  width: 66px;
+  height: 32px;
+  margin-left: auto;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.container .controls .li-wi .lw .toggler.on {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: #24CB49;
+}
+
+.container .controls .li-wi .lw .toggler.on span {
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+.container .controls .li-wi .lw .toggler.off {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: #F12B2B;
+}
+
+.container .controls .li-wi .lw .toggler.off span {
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+
+.container .controls .li-wi .lw .toggler span {
+  width: 26px;
+  height: 26px;
+  margin: 3px 20px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .controls .appliances {
+  padding: 15px 20px;
+}
+
+.container .controls .appliances .cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.container .controls .appliances .cont .device {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+  margin: 10px 0;
+}
+
+.container .controls .appliances .cont .device p {
+  text-align: left;
+}
+
+.container .controls .appliances .cont .device svg {
+  margin-right: 15px;
+}
+
+.container .usage-cam {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.5fr 2.5fr 4fr;
+      grid-template-columns: 2.5fr 2.5fr 4fr;
+  grid-gap: 20px;
+  margin-top: 1em;
+}
+
+.container .usage-cam .camera {
+  padding: 0;
+  position: relative;
+  color: #1388CA;
+  background: #333;
+}
+
+.container .usage-cam .camera svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.container .usage-cam .camera img {
+  width: 100%;
+  border-radius: 20px;
+  height: 205px;
+}
+
+.container .usage-cam .camera p {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+.over {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
