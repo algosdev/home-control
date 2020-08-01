@@ -13,6 +13,24 @@ const temp = document.querySelector('.temperature');
 const rooms = document.querySelectorAll('.rooms p');
 let activeRoom = rooms[2];
 const images = ['/img/1.png', '/img/2.png', '/img/3.png', '/img/4.png', '/img/5.png'];
+let first = (localStorage.getItem("first") === null) ? true : localStorage.getItem("first");
+if (first == true) {
+    setTimeout(() => {
+        if (first) {
+            window.onload = whenOnload();
+            localStorage.setItem('first', 'false');
+        }
+    }, 5300);
+}
+else {
+    whenOnload();
+}
+function whenOnload() {
+    console.log("Loaded");
+    document.querySelector(".preload-cont").style.display = "none";
+    document.querySelector("body").style.overflow = "visible";
+}
+
 rooms.forEach(el => {
     el.addEventListener('click', () => {
         activeRoom.classList.remove('linear');
@@ -57,7 +75,7 @@ var chart = new Chart(ctx, {
     type: 'line',
     responsive: true,
     data: {
-        labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July'],
         datasets: [{
             label: 'kW/h (last 6 months)',
             backgroundColor: '#fff',
@@ -93,7 +111,7 @@ var chartw = new Chart(ctxw, {
     type: 'line',
     responsive: true,
     data: {
-        labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July'],
         datasets: [{
             label: 'litre (last 6 months)',
             backgroundColor: '#fff',
